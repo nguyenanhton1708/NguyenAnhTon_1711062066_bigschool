@@ -18,12 +18,15 @@ namespace NguyenAnhTon_1711062066.Controllers
         }
         public ActionResult Create()
         {
-            var viewModel = new CourseViewModel
             {
-                Categories = _dbContext.Categories.ToList()
-            };
-            return View(viewModel);
+                var viewModel = new CourseViewModel
+                {
+                    Categories = _dbContext.Categories.ToList()
+                };
+                return View(viewModel);
+            }
         }
+
         // GET: Courses
         [Authorize]
         [HttpPost]
@@ -45,12 +48,14 @@ namespace NguyenAnhTon_1711062066.Controllers
             _dbContext.Courses.Add(course);
             _dbContext.SaveChanges();
             return RedirectToAction("Index", "Home");
-          
-              /* var viewModel = new CourseViewModel
-                {
-                    Categories = _dbContext.Categories.ToList()
-                };
-                return View(viewModel); */
         }
     }
+    /*public ActionResult Create()
+       {
+           var viewModel = new CourseViewModel
+           {
+               Categories = _dbContext.Categories.ToList()
+           };
+           return View(viewModel);
+       }*/
 }
