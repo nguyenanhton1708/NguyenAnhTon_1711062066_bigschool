@@ -14,10 +14,6 @@
         color: white;
     }
 
-    .navbar-inverse .navbar-nav > li > a:hover {
-        color: #00ff21;
-    }
-
 .col-md-10 {
     margin-bottom: 15px;
 }
@@ -33,7 +29,6 @@
     color: white;
     margin-left: 30px;
 }
-
 .course {
     list-style: none;
 }
