@@ -16,7 +16,6 @@ namespace NguyenAnhTon_1711062066.Controllers
         {
             _dbContext = new ApplicationDbContext();
         }
-        [HttpGet]
         public ActionResult Create()
         {
             var viewModel = new CourseViewModel
