@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using NguyenAnhTon_1711062066.ViewModels;
+
 namespace NguyenAnhTon_1711062066.Controllers
 {
     public class HomeController : Controller
@@ -15,25 +17,17 @@ namespace NguyenAnhTon_1711062066.Controllers
         }
         public ActionResult Index()
         {
-            var upcomingCourses = _dbContext.Courses 
+            var upcommingCourses = _dbContext.Courses
                 .Include(c => c.Lecturer)
                 .Include(c=> c.Category)
                 .Where (c=> c.DateTime > DateTime.Now);
-            return View(upcomingCourses);
-        }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            var viewModel = new CoursesViewModel
+            {
+                UpcommingCourses = upcommingCourses,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+            return View(viewModel);
         }
     }
 }

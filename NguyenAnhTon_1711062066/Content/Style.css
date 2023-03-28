@@ -1,4 +1,4 @@
-﻿body {
+﻿﻿body {
 }
 
 .navbar-inverse {
@@ -14,21 +14,22 @@
         color: white;
     }
 
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #00ff21;
+    }
+
 .col-md-10 {
     margin-bottom: 15px;
 }
 
 .container-head {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     margin-left: 50px;
 }
 
-.nav-link {
-    color: white;
-    margin-left: 30px;
-}
+
 .course {
     list-style: none;
 }
@@ -51,5 +52,7 @@
         position: absolute;
         top: 10px;
         left: 70px;
-    }body {
+    }
+
+body {
 }
