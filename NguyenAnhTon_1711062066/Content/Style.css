@@ -35,8 +35,11 @@
 }
 
     .course > li {
+        display:flex;
+        align-items:center;
         position: relative;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+        margin-top:30px;
     }
 
     .course .date {
@@ -50,9 +53,20 @@
 
     .course .details {
         position: absolute;
-        top: 10px;
         left: 70px;
     }
-
+    .course .lecturer{
+        display:block;
+    }
+    
+    .btn-default{
+        margin-left:10px;
+    }
+.course > li .action {
+    display: block;
+    left: 70px;
+    top:40px;
+    position: absolute;
+}
 body {
 }
